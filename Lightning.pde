@@ -1,12 +1,12 @@
-int startX = 500;
+int startX = 400;
 int startY = 0;
-int endX = 500;
+int endX = 400;
 int endY = 0;
 
 void setup()
 {
   background(0);
-  size(1000,1000);
+  size(800,800);
   strokeWeight(3);
   frameRate(10);
 }
@@ -25,32 +25,32 @@ void draw()
     fill(color1, color2, color3);
     stroke(color1, color2, color3, opacity);
     endX = startX + (int)(Math.random()*17) - 8;
-    endY = startY + (int)(Math.random()* 8);
+    endY = startY + (int)(Math.random()* 8); 
     line(startX, startY, endX, endY);
     startX = endX;
     startY = endY;
     noStroke();
   }
-  rect(0, 800, 1000, 1000);
+  rect(0, 600, 800, 800);
   while(opacity > 255){
     opacity -= 1;
   }
   //cloud
 
   fill(cloudColor);
-  ellipse(500, 0, 75, 50);
-  ellipse(560, 20, 75, 50);
-  ellipse(440, 20, 75, 50);
-  ellipse(520, 45, 75, 50);
-  ellipse(480, 45, 75, 50);
+  ellipse(400, 0, 75, 50);
+  ellipse(460, 20, 75, 50);
+  ellipse(340, 20, 75, 50);
+  ellipse(420, 45, 75, 50);
+  ellipse(380, 45, 75, 50);
   fill(255);
   cloudColor = 255;
 }
 
 void mousePressed(){
-  startX = 500;
+  startX = 400;
   startY = 0;
-  endX = 500;
+  endX = 400;
   endY = 0;
   cloudColor = 100;
 {
